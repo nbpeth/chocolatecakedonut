@@ -1,10 +1,10 @@
 
 var scene = new THREE.Scene();
-var renderer = new THREE.WebGLRenderer();
+var renderer = new THREE.WebGLRenderer({ alpha: true });
 var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
 
 setRenderSize();
-renderer.setClearColor( 0x000000 );
+renderer.setClearColor( 0x000000, 0 );
 
 var geometry = new THREE.TorusGeometry( 12, 3, 24, 100 );
 var material = new THREE.MeshPhongMaterial({

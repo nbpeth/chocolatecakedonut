@@ -8,22 +8,22 @@ import org.springframework.web.bind.annotation.PostMapping
 import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RestController
 
-@RestController("/scores")
+@RestController
 class ScoreController {
     @Autowired
     ScoreService scoreService
 
-    @GetMapping()
+    @GetMapping("/scores")
     def getAllScores(){
         scoreService.getAllScores()
     }
 
-    @GetMapping("/{player}")
+    @GetMapping("/scores/{player}")
     def getScoresByPlayer(@PathVariable("player") String player){
         scoreService.getScoresBy(player)
     }
 
-    @PostMapping()
+    @PostMapping("/scores")
     def saveScore(@RequestBody String json){
         scoreService.saveScore(json)
     }

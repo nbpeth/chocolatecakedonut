@@ -10,7 +10,6 @@ import org.springframework.context.annotation.Primary
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories
 import org.springframework.transaction.annotation.EnableTransactionManagement
 
-import javax.sql.DataSource
 
 @Configuration
 @EnableJpaRepositories
@@ -23,15 +22,18 @@ class AppConfig {
         new ScoreService()
     }
 
-    @Bean
-    @Primary
-    @ConfigurationProperties(prefix = "spring.datasource.prod")
-    public DataSource dataSource() {
-        def db =  DataSourceBuilder.create().build();
+//    @Bean
+//    @Primary
+//    @ConfigurationProperties(prefix = "spring.datasource")
+//    public DataSource dataSource() {
+//
+//        def db =  DataSourceBuilder.create().build();
+//
+//        db
+//    }
 
-        println "!!!!!!!! " + db.properties
-
-        db
+    String getEnv(){
+        System.getProperty("PROMOTION_LEVEL")
     }
 
 

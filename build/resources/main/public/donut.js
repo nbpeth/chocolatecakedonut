@@ -6,7 +6,7 @@ var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHe
 setRenderSize();
 renderer.setClearColor( 0x000000 );
 
-var geometry = new THREE.TorusGeometry( 8, 3, 24, 100 );
+var geometry = new THREE.TorusGeometry( 12, 3, 24, 100 );
 var material = new THREE.MeshPhongMaterial({
 	color: 0x362314,
   specular: 0x452D1A,

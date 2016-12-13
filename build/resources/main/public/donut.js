@@ -8,7 +8,7 @@ renderer.setClearColor( 0x000000, 0 );
 
 var geometry = new THREE.TorusGeometry( 12, 3, 24, 100 );
 var material = new THREE.MeshPhongMaterial({
-	color: 0x362314,
+	color: 0x00DD00,
   specular: 0x452D1A,
   shininess: 10,
 });

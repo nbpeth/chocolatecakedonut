@@ -49,9 +49,9 @@ var camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHe
 setRenderSize();
 renderer.setClearColor( 0x000000, 0 );
 
-var geometry = new THREE.TorusGeometry( 12, 3, 24, 100 );
+var geometry = new THREE.TorusGeometry( 12, 6, 24, 100 );
 
-var texture = THREE.ImageUtils.loadTexture('https://thumbs.dreamstime.com/z/seamless-christmas-tree-pattern-vector-33597421.jpg');
+var texture = THREE.ImageUtils.loadTexture('https://c2.staticflickr.com/6/5566/13947160250_8926608d5a_b.jpg');
 var material = new THREE.MeshBasicMaterial({map: texture});
 
 var torus = new THREE.Mesh( geometry, material );

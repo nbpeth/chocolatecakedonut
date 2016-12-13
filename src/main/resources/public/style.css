@@ -50,6 +50,23 @@ header a, a:visited {
     to {background-position:-10000px 5000px;}
 }
 
+@keyframes move-snow-back {
+    from {background-position:0 1000;}
+    to {background-position:-1000px -10000px;}
+}
+@-webkit-keyframes move-snow-back {
+    from {background-position:1000 0;}
+    to {background-position:-1000px -10000px;}
+}
+@-moz-keyframes move-snow-back {
+    from {background-position:0 1000;}
+    to {background-position:-1000px -10000px;}
+}
+@-ms-keyframes move-snow-back {
+    from {background-position:0 1000;}
+    to {background-position:-1000px -10000px;}
+}
+
 @keyframes move-clouds-back {
     from {background-position:0 0;}
     to {background-position:10000px 0;}
@@ -81,6 +98,13 @@ header a, a:visited {
 .stars {
   background:#000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
   z-index:-2;
+  -moz-animation:move-snow-back 200s linear infinite;
+  -ms-animation:move-snow-back 200s linear infinite;
+  -o-animation:move-snow-back 200s linear infinite;
+  -webkit-animation:move-snow-back 200s linear infinite;
+  animation:move-snow-back 200s linear infinite;
+  -webkit-animation-direction: alternate-reverse; 
+    animation-direction: alternate-reverse;
 }
 
 .twinkling{
@@ -92,6 +116,7 @@ header a, a:visited {
   -o-animation:move-twink-back 200s linear infinite;
   -webkit-animation:move-twink-back 200s linear infinite;
   animation:move-twink-back 200s linear infinite;
+
 }
 
 .clouds{
